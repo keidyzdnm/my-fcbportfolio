@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Cyberpunk Game Developer Portfolio</title>
+
+    <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Custom Font: Orbitron & Inter -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet" />
+    <!-- Tailwind Configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              midnight: '#0d0915',
+              'midnight-card': '#140d22',
+              'neon-purple': '#a855f7',
+              'neon-cyan': '#06b6d4',
+              'electric-blue': '#38bdf8',
+            },
+            fontFamily: {
+              tech: ['"Chakra Petch"', 'sans-serif'],
+              sans: ['Inter', 'sans-serif'],
+            },
+            boxShadow: {
+              'glow-purple': '0 0 20px -3px rgba(168, 85, 247, 0.35)',
+              'glow-cyan': '0 0 20px -3px rgba(6, 182, 212, 0.35)',
+            }
+          }
+        }
+      }
+    </script>
+
+  </head>
+  <body class="bg-midnight text-gray-200 font-sans min-h-screen antialiased selection:bg-neon-purple selection:text-white flex flex-col justify-between">
+    <!-- BEGIN: MainNavbar -->
+    <header class="sticky top-0 z-50 w-full backdrop-blur-md bg-midnight/80 border-b border-neon-purple/20">
+      <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+        <!-- Brand Logo / Name -->
+        <div class="text-xl font-bold tracking-wider font-tech text-white flex items-center gap-2" data-purpose="nav-brand">
+          <span class="w-2.5 h-2.5 bg-neon-cyan shadow-[0_0_8px_#06b6d4]"></span>
+          <!-- EDIT: NAVBAR_BRAND -->
+          <span>FCB Portfolio</span>
+        </div>
+        <!-- Navigation Links -->
+        <nav class="flex items-center space-x-6 sm:space-x-8 text-sm font-medium tracking-wide font-tech text-gray-300">
+          <a class="hover:text-neon-cyan transition-colors" href="#about">About</a>
+          <a class="hover:text-neon-cyan transition-colors" href="#projects">Projects</a>
+          <a class="hover:text-neon-cyan transition-colors" href="#skills">Skills</a>
+          <a class="hover:text-neon-cyan transition-colors" href="#contact">Contacts</a>
+        </nav>
+      </div>
+    </header>
+    <!-- END: MainNavbar -->
+    <!-- BEGIN: MainContent -->
+    <main class="max-w-6xl mx-auto px-6 py-12 flex-grow space-y-28">
+      <!-- BEGIN: HeroSection -->
+      <section class="flex flex-col md:flex-row items-center gap-10 lg:gap-14 pt-4 pb-6" data-purpose="hero-section" id="hero">
+        <!-- Left: Profile Image Frame -->
+        <div class="w-full md:w-5/12 max-w-sm aspect-square relative group">
+          <div class="absolute -inset-1 bg-gradient-to-r from-neon-purple to-neon-cyan rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+          <div class="relative w-full h-full border-2 border-neon-purple/60 rounded-2xl overflow-hidden bg-midnight-card">
+            <img alt="Profile Avatar" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="./Profile Avatar.png" style="width: 100%; height: 100%; object-fit: cover;" />
+          </div>
+        </div>
+        <!-- Right: Hero Details -->
+        <div class="w-full md:w-7/12 flex flex-col items-start justify-center space-y-5">
+          <!-- EDIT: NAME -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-tech text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-100 to-purple-200 tracking-tight">Mendoza, Kristine Dale</h1>
+          <!-- EDIT: JOB_TITLE -->
+          <p class="text-xl sm:text-2xl font-tech font-semibold text-neon-cyan tracking-wide">Game Developer</p>
+          <!-- EDIT: SHORT_INTRO -->
+          <p class="text-base sm:text-lg text-gray-400 max-w-xl leading-relaxed">Explore a game developer portfolio showcasing game design, gameplay programming, level design, and interactive experiences built with creativity and technical skills.</p>
+          <!-- CTA Action Buttons -->
+          <div class="flex flex-wrap gap-4 pt-4">
+            <!-- EDIT: HERO_CTA_PROJECTS -->
+            <a class="px-6 py-3 bg-neon-cyan hover:bg-electric-blue text-slate-950 font-tech font-bold rounded-lg shadow-glow-cyan hover:shadow-cyan-400/50 transition-all transform hover:-translate-y-0.5 tracking-wider text-sm" href="#projects">View my projects</a>
+            <!-- EDIT: HERO_CTA_CONTACTS -->
+            <a class="px-6 py-3 bg-neon-purple/20 hover:bg-neon-purple/30 text-purple-200 border border-neon-purple/50 font-tech font-bold rounded-lg shadow-glow-purple hover:border-neon-purple transition-all transform hover:-translate-y-0.5 tracking-wider text-sm" href="#contact">Contacts</a>
+          </div>
+        </div>
+      </section>
+      <!-- END: HeroSection -->
+      <!-- BEGIN: AboutSection -->
+      <section class="space-y-6" data-purpose="about-section" id="about">
+        <h2 class="text-3xl font-bold font-tech text-center text-white tracking-wide">About</h2>
+        <!-- About Container Box -->
+        <div class="cyber-card rounded-2xl p-8 sm:p-12 text-center max-w-4xl mx-auto min-h-[160px] flex items-center justify-center">
+          <!-- EDIT: ABOUT_YOU -->
+          <p class="text-base sm:text-lg text-gray-300 leading-relaxed font-light">I am a game developer passionate about creating engaging, interactive, and immersive gaming experiences. My interests include game design, gameplay programming, level design, user interface development, and exploring new technologies to bring creative ideas to life. I focus on building games that balance enjoyable mechanics, intuitive controls, and compelling visual elements. Through problem-solving, creativity, and continuous learning, I aim to develop interactive games that entertain players, deliver meaningful experiences, and turn concepts into playable projects.</p>
+        </div>
+      </section>
+      <!-- END: AboutSection -->
+      <!-- BEGIN: ProjectsSection -->
+      <section class="space-y-8" data-purpose="projects-section" id="projects">
+        <h2 class="text-3xl font-bold font-tech text-center text-white tracking-wide">Projects</h2>
+        <!-- Project Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <!-- Project Card 1 -->
+          <div class="cyber-card rounded-xl overflow-hidden flex flex-col justify-between" data-purpose="project-card">
+            <div>
+              <div class="w-full h-[200px] overflow-hidden bg-midnight">
+                <img alt="Project Thumbnail" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGy9JriOVm-NrLpc9Db2y8-XpbIDRlpTV4O6Q-vHwKfM_slfX5ReF7uvGl0i7UAbtWsRVrqLO6hfc8QlDMKP6DAz1GlKKlFVMzQP8YCBirHhF6C7b6auRP5D8Jv4KKZvuag_YXKJ1PCErL24-ROmFzrBX7OMRqidm3HjDBaGWYOs4-q3EUb0l4QvdIspC0MQ3JJOlCCX6SFSAXVQl6g9bfqT0NhZYJeM25MNNwVdo" style="width: 100%; height: 200px; object-fit: cover; overflow: hidden;" />
+              </div>
+              <div class="p-6 space-y-3">
+                <!-- EDIT: PROJECT_TITLE -->
+                <h3 class="text-xl font-bold font-tech text-white">Project Title</h3>
+                <!-- EDIT: PROJECT_DESCRIPTION -->
+                <p class="text-sm text-gray-400 leading-relaxed">Project Description</p>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <!-- EDIT: PROJECT_LINK -->
+              <a class="inline-block px-5 py-2.5 bg-neon-cyan hover:bg-electric-blue text-slate-950 font-tech font-bold rounded-lg text-xs tracking-wider transition-all" href="#">Project Link</a>
+            </div>
+          </div>
+          <!-- Project Card 2 -->
+          <div class="cyber-card rounded-xl overflow-hidden flex flex-col justify-between" data-purpose="project-card">
+            <div>
+              <div class="w-full h-[200px] overflow-hidden bg-midnight">
+                <img alt="Project Thumbnail" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmN7XRXPXTyavKW9lhyXliKOzCNtsBHFIkkVWNM1J5Lg3yA6PounHMzsxqZGIO0d9oyziHCzm-0KqyOj_l3mtg1VFvJ21eWOEYujCwVAc-Y6W68LO3c9bbtsub4Q2PmrFFYG5YeP3j5Tcn4W-gElkoFJ_84vJGGHGqiHGSg29SBxpUKX61L-DU-b7RDOZnwuVZDgi8iAxmESN-hLLZJwSbD-YFPWUAO48hNuG_vrA" style="width: 100%; height: 200px; object-fit: cover; overflow: hidden;" />
+              </div>
+              <div class="p-6 space-y-3">
+                <!-- EDIT: PROJECT_TITLE -->
+                <h3 class="text-xl font-bold font-tech text-white">Project Title</h3>
+                <!-- EDIT: PROJECT_DESCRIPTION -->
+                <p class="text-sm text-gray-400 leading-relaxed">Project Description</p>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <!-- EDIT: PROJECT_LINK -->
+              <a class="inline-block px-5 py-2.5 bg-neon-cyan hover:bg-electric-blue text-slate-950 font-tech font-bold rounded-lg text-xs tracking-wider transition-all" href="#">Project Link</a>
+            </div>
+          </div>
+          <!-- Project Card 3 -->
+          <div class="cyber-card rounded-xl overflow-hidden flex flex-col justify-between" data-purpose="project-card">
+            <div>
+              <div class="w-full h-[200px] overflow-hidden bg-midnight">
+                <img alt="Project Thumbnail" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAChs4BWIiGMeEvIUeKzikQRADxA2Yw6g88zUPvoygfsEAQJLVl_SWx-32eG_z_LBacYAS13hj-nZZiPokcmaqugCSvX3bz3rPkibFhDZuSEf_LfY_jJpUHomrPLbFQlsbO9HutSIoG2mLgQvxHEcQJzhC31ifaSyVUmN0BiedvURH8OiwWsw_x8-ecepEophxZ5G83G-p5I7xj7r8EFu7mQuIntkrcblX9P2rABMs" style="width: 100%; height: 200px; object-fit: cover; overflow: hidden;" />
+              </div>
+              <div class="p-6 space-y-3">
+                <!-- EDIT: PROJECT_TITLE -->
+                <h3 class="text-xl font-bold font-tech text-white">Project Title</h3>
+                <!-- EDIT: PROJECT_DESCRIPTION -->
+                <p class="text-sm text-gray-400 leading-relaxed">Project Description</p>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <!-- EDIT: PROJECT_LINK -->
+              <a class="inline-block px-5 py-2.5 bg-neon-cyan hover:bg-electric-blue text-slate-950 font-tech font-bold rounded-lg text-xs tracking-wider transition-all" href="#">Project Link</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: ProjectsSection -->
+      <!-- BEGIN: SkillsSection -->
+      <section class="space-y-8" data-purpose="skills-and-tools-section" id="skills">
+        <h2 class="text-3xl font-bold font-tech text-center text-white tracking-wide">Skills and tools</h2>
+        <!-- 2 Column Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
+          <!-- Card 1: Skills -->
+          <div class="cyber-card rounded-2xl p-8 flex flex-col items-center justify-center text-center">
+            <h3 class="text-2xl font-bold font-tech text-white mb-6 tracking-wide">Skills</h3>
+            <ul class="space-y-3 text-gray-300 font-tech text-base">
+              <!-- EDIT: SKILL -->
+              <li class="px-4 py-2 bg-midnight/60 rounded-md border border-neon-purple/30">Creative Thinking</li>
+              <li>Problem Solving</li>
+              <li>Logical Thinking</li>
+              <li>Digital Art & Drawing</li>
+              <li>Technical Troubleshooting</li>
+            </ul>
+          </div>
+          <!-- Card 2: Tools / Technologies -->
+          <div class="cyber-card rounded-2xl p-8 flex flex-col items-center justify-center text-center">
+            <h3 class="text-2xl font-bold font-tech text-white mb-6 tracking-wide">Tools / Technologies</h3>
+            <ul class="space-y-3 text-gray-300 font-tech text-base">
+              <!-- EDIT: TOOL -->
+              <li class="px-4 py-2 bg-midnight/60 rounded-md border border-neon-cyan/30">PyCharm</li>
+              <li>Visual Studio Code</li>
+              <li>GitHub</li>
+              <li>Figma</li>
+              <li>Canva</li>
+
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- END: SkillsSection -->
+      <!-- BEGIN: ContactSection -->
+      <section class="space-y-8" data-purpose="contact-section" id="contact">
+        <h2 class="text-3xl font-bold font-tech text-center text-white tracking-wide">Contact</h2>
+        <!-- Contact Info Card -->
+        <div class="cyber-card rounded-xl p-8 sm:p-12 max-w-3xl mx-auto text-center space-y-4">
+          <!-- EDIT: CONTACT_INFO -->
+          <p class="text-base text-gray-400 font-sans">(+63) 966 789 7279</p>
+          <p class="text-base text-gray-400 font-sans">keidy.zdnm@gmail.com</p>
+          <!-- EDIT: SOCIAL_LINK -->
+          <div class="pt-4">
+            <a class="inline-block text-neon-cyan hover:text-electric-blue font-tech font-semibold tracking-wider hover:underline transition-colors" href="https://www.linkedin.com/in/kristine-dale-mendoza-634030304/">LinkedIn Profile</a>
+          </div>
+        </div>
+      </section>
+      <!-- END: ContactSection -->
+    </main>
+    <!-- END: MainContent -->
+    <!-- BEGIN: MainFooter -->
+    <footer class="w-full border-t border-neon-purple/20 bg-midnight/90 py-6 mt-20 text-center" data-purpose="page-footer">
+      <p class="text-xs font-tech text-gray-500 uppercase tracking-widest">Portfolio</p>
+    </footer>
+    <!-- END: MainFooter -->
+  </body>
+</html>

@@ -1,0 +1,26 @@
+
+    <!-- BEGIN: Custom Cyberpunk Theme Styles -->
+    <style data-purpose="cyberpunk-theme">
+      body {
+        background-color: #0d0915;
+        background-image:
+          radial-gradient(circle at 15% 20%, rgba(168, 85, 247, 0.08) 0%, transparent 40%),
+          radial-gradient(circle at 85% 75%, rgba(6, 182, 212, 0.08) 0%, transparent 40%),
+          linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+      }
+
+      .cyber-card {
+        border: 1px solid rgba(168, 85, 247, 0.3);
+        background: linear-gradient(180deg, rgba(20, 13, 34, 0.9) 0%, rgba(13, 9, 21, 0.95) 100%);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease;
+      }
+
+      .cyber-card:hover {
+        border-color: #06b6d4;
+        box-shadow: 0 0 25px rgba(6, 182, 212, 0.25);
+      }
+    </style>
+    <!-- END: Custom Cyberpunk Theme Styles -->
